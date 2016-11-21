@@ -1,5 +1,5 @@
-import Annotation from './src/js/Annotation'
-import AnnotationCollection from './src/js/AnnotationCollection'
+import Annotation from './src/Annotation'
+import AnnotationCollection from './src/AnnotationCollection'
 
 export default {
   Annotation,

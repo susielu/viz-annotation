@@ -1,15 +1,8 @@
 
 export default class Annotation {
-  x: number
-  y: number
-  dx: number
-  dy: number
-  text: string
-  title: string
-  data: Object
-
   constructor({ x, y, dy, dx, text, title, data }) {
     //super() calls parent's constructor
+
     this.x = x || 0
     this.y = y || 0
     this.dx = dx || 0
@@ -17,7 +10,7 @@ export default class Annotation {
     this.text = text
     this.title = title
     this.data = data || {}
-
+    console.log("in constructor", this)
   }
 
   get position() { return { x: this.x, y: this.y }}
@@ -41,5 +34,4 @@ export default class Annotation {
       title: this.title,
       data: this.data
    }}
-
 }

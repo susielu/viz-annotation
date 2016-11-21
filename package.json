@@ -15,14 +15,12 @@
     "babelrc-rollup": "3.0.0",
     "npm-watch": "0.1.6",
     "rollup": "0.34.7",
-    "rollup-plugin-babel": "2.6.1",
-    "typescript": "2.0.8"
+    "rollup-plugin-babel": "2.6.1"
   },
   "scripts": {
     "start": "npm run watch",
     "build": "rollup -c",
     "watch": "npm-watch",
-    "typescript": "tsc --outdir src/js",
     "prepublish": "npm run build"
   },
   "author": {
@@ -30,8 +28,7 @@
     "url": "http://www.susielu.com"
   },
   "watch": {
-    "build": "src/js/*.js",
-    "typescript": "src/*.ts"
+    "build": "src/*.js"
   },
   "repository": {
     "type": "git",
