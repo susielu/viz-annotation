@@ -1,6 +1,6 @@
 {
   "name": "viz-annotation",
-  "version": "0.0.1-1",
+  "version": "0.0.1-2",
   "description": "Shared drawing logic for handling annotations for data visualization.",
   "keywords": [
     "annotation",
