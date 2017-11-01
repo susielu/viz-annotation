@@ -1,17 +1,11 @@
 {
   "name": "viz-annotation",
   "version": "0.0.1-0",
-  "description": "Shared drawing logic for handling annotations for data visualization.",
-  "keywords": [
-    "annotation",
-    "data visualization"
-  ],
-  "directories": {},
+  "description":
+    "Shared drawing logic for handling annotations for data visualization.",
+  "keywords": ["annotation", "data visualization"],
+  "files": ["lib"],
   "main": "lib/index.js",
-  "files": [
-    "annotation.js",
-    "annotation.js.map"
-  ],
   "devDependencies": {
     "babel-cli": "6.24.1",
     "babel-eslint": "^8.0.1",
@@ -43,8 +37,6 @@
   },
   "dependencies": {},
   "babel": {
-    "presets": [
-      "es2015"
-    ]
+    "presets": ["es2015"]
   }
 }
