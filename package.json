@@ -18,6 +18,7 @@
     "eslint": "3.8.1",
     "npm-watch": "0.1.6"
   },
+  "dependencies": {},
   "scripts": {
     "start": "npm run watch",
     "build": "babel src -d lib",
@@ -39,7 +40,6 @@
   "bugs": {
     "url": "https://github.com/susielu/viz-annotation/issues"
   },
-  "dependencies": {},
   "babel": {
     "presets": [
       "es2015"
