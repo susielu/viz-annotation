@@ -40,13 +40,14 @@ export default ({
 
     const cHandles = [
       {
-        ...h.r1,
+        x: h.r1.x,
+        y: h.r1.y,
         key: c.data.outerRadius ? "outerRadius" : "radius"
       }
     ]
 
     if (innerRadius) {
-      cHandles.push({ ...h.r2, key: "innerRadius" })
+      cHandles.push({ x: h.r2.x, y: h.r2.y, key: "innerRadius" })
     }
     handles = cHandles
   }
