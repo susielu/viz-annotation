@@ -1,14 +1,10 @@
 {
   "name": "viz-annotation",
-  "version": "0.0.1-3",
-  "description": "Shared drawing logic for handling annotations for data visualization.",
-  "keywords": [
-    "annotation",
-    "data visualization"
-  ],
-  "files": [
-    "lib"
-  ],
+  "version": "0.0.1-4",
+  "description":
+    "Shared drawing logic for handling annotations for data visualization.",
+  "keywords": ["annotation", "data visualization"],
+  "files": ["lib"],
   "main": "lib/index.js",
   "devDependencies": {
     "babel-cli": "6.24.1",
@@ -16,9 +12,12 @@
     "babel-plugin-external-helpers": "6.18.0",
     "babel-preset-es2015": "6.18.0",
     "eslint": "3.8.1",
-    "npm-watch": "0.1.6"
+    "npm-watch": "0.1.6",
+    "webpack": "3.8.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "d3-shape": "1.0.4"
+  },
   "scripts": {
     "start": "npm run watch",
     "build": "babel src -d lib",
@@ -41,8 +40,6 @@
     "url": "https://github.com/susielu/viz-annotation/issues"
   },
   "babel": {
-    "presets": [
-      "es2015"
-    ]
+    "presets": ["es2015"]
   }
 }

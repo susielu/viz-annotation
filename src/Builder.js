@@ -1,4 +1,6 @@
-import { line, arc, curveLinear } from "d3-shape"
+import line from "d3-shape/src/line"
+import arc from "d3-shape/src/arc"
+import curveLinear from "d3-shape/src/curve/linear"
 
 export const lineBuilder = ({
   data,

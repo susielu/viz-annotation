@@ -1,6 +1,6 @@
 import { lineBuilder } from "../Builder"
 import { lineSetup } from "./type-line"
-import { curveCatmullRom } from "d3-shape"
+import curveCatmullRom from "d3-shape/src/curve/catmullRom"
 
 const createPoints = function(offset, anchors = 2) {
   const diff = { x: offset.x / (anchors + 1), y: offset.y / (anchors + 1) }
