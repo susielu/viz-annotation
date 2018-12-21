@@ -1,6 +1,6 @@
 {
   "name": "viz-annotation",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Shared drawing logic for handling annotations for data visualization.",
   "keywords": [
     "annotation",
@@ -19,8 +19,8 @@
     "npm-watch": "0.1.6",
     "webpack": "3.8.1"
   },
-  "peerDepend": {
-    "d3-shape": "^1.0.4"
+  "dependencies": {
+    "d3-shape": "~1.0.4"
   },
   "scripts": {
     "start": "npm run watch",
