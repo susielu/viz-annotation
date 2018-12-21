@@ -1,17 +1,17 @@
-import { lineBuilder } from "../Builder"
-import { lineSetup } from "./type-line"
-import curveCatmullRom from "d3-shape/src/curve/catmullRom"
+import { lineBuilder } from "../Builder";
+import { lineSetup } from "./type-line";
+import { curveCatmullRom } from "d3-shape";
 
 const createPoints = function(offset, anchors = 2) {
-  const diff = { x: offset.x / (anchors + 1), y: offset.y / (anchors + 1) }
-  const p = []
+  const diff = { x: offset.x / (anchors + 1), y: offset.y / (anchors + 1) };
+  const p = [];
 
-  let i = 1
+  let i = 1;
   for (; i <= anchors; i++) {
-    p.push([diff.x * i + (i % 2) * 20, diff.y * i - (i % 2) * 20])
+    p.push([diff.x * i + (i % 2) * 20, diff.y * i - (i % 2) * 20]);
   }
-  return p
-}
+  return p;
+};
 
 export default ({
   curve,
@@ -26,13 +26,13 @@ export default ({
   height
 }) => {
   if (!points || typeof points === "number") {
-    points = createPoints({ x: dx, y: dy }, points)
+    points = createPoints({ x: dx, y: dy }, points);
   }
   if (!curve) {
-    curve = curveCatmullRom
+    curve = curveCatmullRom;
   }
 
-  let handles = []
+  let handles = [];
 
   // if (type.editMode) {
   //   const cHandles = connectorData.points.map((c, i) => ({
@@ -52,9 +52,9 @@ export default ({
   // }
 
   // let data = lineSetup({ type, subjectType })
-  let data = lineSetup({ x, y, dx, dy, radius, outerRadius, width, height })
-  data = [data[0], ...points, data[1]]
-  const components = [lineBuilder({ data, curve, className: "connector" })]
+  let data = lineSetup({ x, y, dx, dy, radius, outerRadius, width, height });
+  data = [data[0], ...points, data[1]];
+  const components = [lineBuilder({ data, curve, className: "connector" })];
 
-  return { components, handles }
-}
+  return { components, handles };
+};
