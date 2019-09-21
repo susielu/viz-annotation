@@ -63,11 +63,22 @@ export default ({ height, width, depth, type, editMode }) => {
   let handles = []
   let data
   let bracket
+
+
+  let w = 0, h=0
+
+  if (height && height >0){
+    h = height
+  } else if (width && width > 0){
+    w = width
+  }
+
+
   if (type === "square") {
-    if (height) {
-      data = [[0, 0], [depth, 0], [depth, height], [0, height]]
-    } else if (width) {
-      data = [[0, 0], [0, depth], [width, depth], [width, 0]]
+    if (h) {
+      data = [[0, 0], [depth, 0], [depth, h], [0, h]]
+    } else if (w) {
+      data = [[0, 0], [0, depth], [w, depth], [w, 0]]
     }
     bracket = lineBuilder({ data, className: "subject" })
   } else if (type === "curly") {
@@ -75,9 +86,9 @@ export default ({ height, width, depth, type, editMode }) => {
       d: makeCurlyBrace(
         0,
         0,
-        width || 0,
-        height || 0,
-        (height && height > 0) || (width && width < 0) ? -depth : depth,
+        w,
+        h,
+        (h > 0) || (w < 0) ? -depth : depth,
         0.55
       ),
       className: "subject"
@@ -87,15 +98,15 @@ export default ({ height, width, depth, type, editMode }) => {
   if (editMode) {
     handles = [
       {
-        x: height ? depth : width / 2,
-        y: height ? height / 2 : depth,
+        x: h ? depth : w / 2,
+        y: h ? h / 2 : depth,
         key: "depth",
-        type: height ? "X" : "Y"
+        type: h ? "X" : "Y"
       },
       {
-        x: width || 0,
-        y: height || 0,
-        key: height ? "height" : "width"
+        x: w || 0,
+        y: h || 0,
+        key: h ? "height" : "width"
       }
     ]
   }
