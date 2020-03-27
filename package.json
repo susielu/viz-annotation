@@ -21,7 +21,7 @@
     "webpack": "3.8.1"
   },
   "dependencies": {
-    "d3-shape": "~1.0.4"
+    "d3-shape": "~1"
   },
   "scripts": {
     "start": "npm run watch",
